@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1020;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 270px;
+    background: #11182d;
+    border-right: 1px solid #29334d;
+    padding: 22px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: #5865f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.logo h1 {
+    font-size: 19px;
+}
+
+.logo span {
+    color: #8993ad;
+    font-size: 11px;
+}
+
+.new-chat {
+    background: #1a2340;
+    color: white;
+    border: 1px solid #3b4668;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.new-chat:hover {
+    background: #29345a;
+}
+
+.subject-title {
+    color: #77819e;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.subject {
+    padding: 11px 12px;
+    border-radius: 9px;
+    margin-bottom: 5px;
+    color: #c7cee1;
+    cursor: pointer;
+}
+
+.subject:hover,
+.subject.active {
+    background: #29345a;
+    color: white;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    text-align: center;
+    color: #77819e;
+    font-size: 12px;
+}
+
+/* MAIN */
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+.header {
+    height: 70px;
+    background: #0f1529;
+    border-bottom: 1px solid #29334d;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.status {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #42d392;
+}
+
+.header h2 {
+    font-size: 16px;
+}
+
+.header p {
+    color: #7f89a5;
+    font-size: 11px;
+}
+
+/* CHAT */
+
+.chat {
+    flex: 1;
+    overflow-y: auto;
+    padding: 35px 20px;
+}
+
+.chat-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.welcome {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.welcome-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.welcome h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #8993ad;
+}
+
+/* QUICK BUTTONS */
+
+.quick-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.quick-btn {
+    background: #151e36;
+    border: 1px solid #2b3655;
+    color: #cbd2e5;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.quick-btn:hover {
+    background: #222c49;
+    border-color: #5865f2;
+}
+
+/* INPUT */
+
+.input-area {
+    padding: 15px 20px 22px;
+    background: #0b1020;
+}
+
+.input-box {
+    max-width: 850px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #151e36;
+    border: 1px solid #34405f;
+    border-radius: 15px;
+    padding: 8px 10px;
+}
+
+.input-box:focus-within {
+    border-color: #5865f2;
+}
+
+textarea {
+    flex: 1;
+    resize: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    min-height: 42px;
+}
+
+textarea::placeholder {
+    color: #69748f;
+}
+
+.icon-btn {
+    border: none;
+    background: transparent;
+    color: #8993ad;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 9px;
+}
+
+.icon-btn:hover {
+    color: white;
+}
+
+.send-btn {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background: #5865f2;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.send-btn:hover {
+    transform: scale(1.05);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .sidebar {
+        display: none;
+    }
+
+    .chat {
+        padding: 25px 12px;
+    }
+
+    .welcome h2 {
+        font-size: 23px;
+    }
+
+    .input-area {
+        padding: 10px;
+    }
+}
