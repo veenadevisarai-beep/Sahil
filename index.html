@@ -1,140 +1,224 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SST AI Tutor</title>
+```
+<title>Sahil AI | Class 9 SST</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+```
+
 </head>
 
 <body>
 
-    <div class="app">
+<div class="app">
 
-        <aside class="sidebar">
+```
+<!-- SIDEBAR -->
+<aside class="sidebar">
 
-            <div class="logo">
-                <div class="logo-icon">🤖</div>
+    <div class="brand">
+        <div class="brand-icon">S</div>
+        <div>
+            <h1>Sahil AI</h1>
+            <span>Class 9 SST Tutor</span>
+        </div>
+    </div>
 
-                <div>
-                    <h1>SST AI</h1>
-                    <span>Smart Social Science Tutor</span>
-                </div>
+    <button class="new-chat" onclick="newChat()">
+        <span>＋</span> New Chat
+    </button>
+
+    <div class="sidebar-section">
+        <p class="section-title">SUBJECTS</p>
+
+        <button class="subject active" onclick="askTopic('History')">
+            <span>📜</span>
+            <span>History</span>
+        </button>
+
+        <button class="subject" onclick="askTopic('Geography')">
+            <span>🌍</span>
+            <span>Geography</span>
+        </button>
+
+        <button class="subject" onclick="askTopic('Political Science')">
+            <span>⚖️</span>
+            <span>Political Science</span>
+        </button>
+
+        <button class="subject" onclick="askTopic('Economics')">
+            <span>💰</span>
+            <span>Economics</span>
+        </button>
+    </div>
+
+    <div class="sidebar-footer">
+        <div class="creator">
+            <div class="creator-avatar">S</div>
+            <div>
+                <strong>Sahil</strong>
+                <small>AI Project • Class 9</small>
             </div>
+        </div>
+    </div>
 
-            <button class="new-chat">
-                ＋ New Chat
-            </button>
+</aside>
 
-            <p class="subject-title">Subjects</p>
 
-            <div class="subject active">🏛️ History</div>
-            <div class="subject">🌍 Geography</div>
-            <div class="subject">⚖️ Civics</div>
-            <div class="subject">💰 Economics</div>
+<!-- MAIN CONTENT -->
+<main class="main">
 
-            <div class="sidebar-bottom">
-                Class 9 SST AI
+    <header class="topbar">
+
+        <div class="mobile-brand">
+            <div class="brand-icon">S</div>
+            <strong>Sahil AI</strong>
+        </div>
+
+        <div class="online-status">
+            <span class="status-dot"></span>
+            <div>
+                <strong>SST Tutor</strong>
+                <small>Online and ready</small>
             </div>
+        </div>
 
-        </aside>
+    </header>
 
 
-        <main class="main">
+    <!-- CHAT -->
+    <section class="chat" id="chat">
 
-            <header class="header">
+        <div class="chat-container">
 
-                <div class="header-left">
-                    <div class="status"></div>
+            <div class="welcome" id="welcome">
 
-                    <div>
-                        <h2>SST AI Tutor</h2>
-                        <p>Online • Ready to help</p>
-                    </div>
+                <div class="hero-icon">
+                    <span>🤖</span>
                 </div>
 
-            </header>
-
-
-            <section class="chat">
-
-                <div class="chat-container">
-
-                    <div class="welcome">
-
-                        <div class="welcome-icon">
-                            🤖
-                        </div>
-
-                        <h2>How can I help with SST?</h2>
-
-                        <p>
-                            Ask me anything about Class 9 Social Science.
-                        </p>
-
-                        <div class="quick-actions">
-
-                            <button class="quick-btn">
-                                📚 Explain a topic
-                            </button>
-
-                            <button class="quick-btn">
-                                📝 Make notes
-                            </button>
-
-                            <button class="quick-btn">
-                                🎯 Quiz me
-                            </button>
-
-                            <button class="quick-btn">
-                                ❓ Important questions
-                            </button>
-
-                        </div>
-
-                    </div>
-
+                <div class="welcome-badge">
+                    ✨ Class 9 Learning Assistant
                 </div>
 
-            </section>
+                <h2>
+                    What would you like<br>
+                    to learn today?
+                </h2>
+
+                <p>
+                    Ask Sahil AI anything about Class 9 Social Science.
+                </p>
 
 
-            <div class="input-area">
-
-                <div class="input-box">
-
-                    <button class="icon-btn">
-                        📎
-                    </button>
-
-                    <textarea
-                        id="userInput"
-                        placeholder="Ask your SST AI anything..."
-                        rows="1">
-                    </textarea>
-
-                    <button class="icon-btn">
-                        🎤
-                    </button>
+                <div class="quick-grid">
 
                     <button
-                        class="send-btn"
-                        onclick="sendMessage()">
-                        ➤
+                        class="quick-card"
+                        onclick="quickQuestion('What is democracy?')">
+
+                        <span class="quick-icon">🏛️</span>
+
+                        <div>
+                            <strong>Explain a topic</strong>
+                            <small>Learn a concept simply</small>
+                        </div>
+
+                    </button>
+
+
+                    <button
+                        class="quick-card"
+                        onclick="quickQuestion('Make short notes on the French Revolution')">
+
+                        <span class="quick-icon">📝</span>
+
+                        <div>
+                            <strong>Make notes</strong>
+                            <small>Get quick revision notes</small>
+                        </div>
+
+                    </button>
+
+
+                    <button
+                        class="quick-card"
+                        onclick="quickQuestion('Quiz me on Class 9 SST')">
+
+                        <span class="quick-icon">🎯</span>
+
+                        <div>
+                            <strong>Quiz me</strong>
+                            <small>Test your knowledge</small>
+                        </div>
+
+                    </button>
+
+
+                    <button
+                        class="quick-card"
+                        onclick="quickQuestion('What are important Class 9 SST questions?')">
+
+                        <span class="quick-icon">⭐</span>
+
+                        <div>
+                            <strong>Important questions</strong>
+                            <small>Prepare for exams</small>
+                        </div>
+
                     </button>
 
                 </div>
 
             </div>
 
-        </main>
+        </div>
+
+    </section>
+
+
+    <!-- INPUT -->
+    <div class="input-area">
+
+        <div class="input-wrapper">
+
+            <div class="input-box">
+
+                <textarea
+                    id="userInput"
+                    rows="1"
+                    placeholder="Ask Sahil AI about Class 9 SST..."
+                    oninput="autoResize(this)">
+                </textarea>
+
+                <button
+                    class="send-btn"
+                    onclick="sendMessage()"
+                    aria-label="Send message">
+                    ↑
+                </button>
+
+            </div>
+
+            <p class="input-hint">
+                Press <b>Enter</b> to send • <b>Shift + Enter</b> for a new line
+            </p>
+
+        </div>
 
     </div>
 
+</main>
+```
 
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
